@@ -8,6 +8,7 @@ function AuthProvider({ children }) {
   useEffect(() => {
     const savedAuth = localStorage.getItem('auth');
     if (savedAuth === 'true') {
+      console.log('User is authenticated from localStorage');
       setIsAuthenticated(true);
     }
   }, []);
