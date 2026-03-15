@@ -19,3 +19,15 @@ Employee Insights Dashboard
 - Components for rendering only
 
 This improves maintainability 
+
+## Virtualization Design
+
+The grid renders only visible rows plus 5 top + 5 bottom = 10 buffer rows.
+
+calcs- 
+
+startIndex = floor(scrollTop / rowHeight)
+
+A spacer div preserves native scroll height.
+
+Visible rows are vertically translated using translateY.
