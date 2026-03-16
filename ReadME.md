@@ -31,3 +31,16 @@ startIndex = floor(scrollTop / rowHeight)
 A spacer div preserves native scroll height.
 
 Visible rows are vertically translated using translateY.
+
+## Analytics Design
+
+Salary distribution is rendered using raw SVG.
+
+Why SVG:
+- Explicit coordinate control
+- No chart library dependency
+- Full manual rendering logic
+
+City mapping uses Leaflet.
+
+City names are mapped to coordinates through a utility dictionary to separate domain data from rendering.
